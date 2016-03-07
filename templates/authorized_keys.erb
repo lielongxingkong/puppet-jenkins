@@ -3,8 +3,8 @@
 # HEADER: is definitely not recommended.
 <% if @ssh_key.is_a? Array -%>
 <% @ssh_key.each do |key| -%>
-ssh-rsa <%= key %>
+<%= key %>
 <% end -%>
 <% else %>
-ssh-rsa <%= @ssh_key %>
+<%= @ssh_key %>
 <% end -%>

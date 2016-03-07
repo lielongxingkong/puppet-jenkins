@@ -162,7 +162,7 @@ class jenkins::master(
     owner   => 'jenkins',
     group   => 'jenkins',
     mode    => '0644',
-    content => "ssh_rsa ${jenkins_ssh_public_key} jenkins@${::fqdn}",
+    content => $jenkins_ssh_public_key,
     replace => true,
     require => File['/var/lib/jenkins/.ssh/'],
   }
